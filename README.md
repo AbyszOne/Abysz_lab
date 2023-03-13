@@ -7,7 +7,11 @@ The degree of temporal stability of a given video is scanned, and an attempt is 
 Guide version 0.0.1 includes the following parameters.
 
 Frame refresh frequency: Every how many frames the interpolation is reduced. It allows to keep more information of the raw video, and avoid major ghosting.
+
 Refresh Strength: The intensity of the refresh.
+
 DFI Strength: The amount of information to use from the reference video.
+
 DFI Deghost: A variable that generally reduces the areas affected by DFI. This can reduce ghosting without changing DFI strength.
+
 Smooth: Smoothes the interpolation. High values reduce the effectiveness of the process.
