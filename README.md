@@ -19,4 +19,5 @@ Guide version 0.0.1 includes the following parameters.
 # Requirements
 
 OpenCV: pip install opencv
+
 Imagemagick library: https://imagemagick.org/script/download.php
