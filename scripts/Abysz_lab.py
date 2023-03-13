@@ -48,7 +48,7 @@ class Script(scripts.Script):
         
         return [source_folder, generated_folder, out_folder, slider1, slider2, slider3, slider4, slider5, render_button]        
         #def run_Abysz_lab(slider1, slider2, slider3, slider4, slider5):
-    def run_Abysz_lab(self, slider1, slider2, slider3, slider4, slider5):
+    def run_Abysz_lab(self, slider1, slider2, slider3, slider4, slider5, render_button):
         slider1_val = slider1.value
         slider2_val = slider2.value
         slider3_val = slider3.value
