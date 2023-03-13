@@ -15,3 +15,8 @@ Guide version 0.0.1 includes the following parameters.
 **DFI Deghost:** A variable that generally reduces the areas affected by DFI. This can reduce ghosting without changing DFI strength.
 
 **Smooth:** Smoothes the interpolation. High values reduce the effectiveness of the process.
+
+# Requirements
+
+OpenCV: pip install opencv
+Imagemagick library: https://imagemagick.org/script/download.php
