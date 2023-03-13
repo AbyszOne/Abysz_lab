@@ -6,7 +6,7 @@ This is a project under construction. Currently, only a basic use of DFI has bee
 The degree of temporal stability of a given video is scanned, and an attempt is made to force that information onto another video using differential frame interpolation.
 Guide version 0.0.1 includes the following parameters.
 
-Frame refresh frequency: Every how many frames the interpolation is reduced. It allows to keep more information of the raw video, and avoid major ghosting.
+**Frame refresh frequency:** Every how many frames the interpolation is reduced. It allows to keep more information of the raw video, and avoid major ghosting.
 
 Refresh Strength: The intensity of the refresh.
 
