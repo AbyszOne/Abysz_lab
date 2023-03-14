@@ -1,4 +1,4 @@
-# Abysz video temporal coherency lab. Automatic1111 Extension.
+# Abysz video temporal coherency lab. Gradio GUI.
 
 This is a project under construction. Currently, only a basic use of DFI has been added.
 
