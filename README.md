@@ -1,6 +1,6 @@
 # Abysz AI temporal coherence lab. Gradio GUI.
 
-![Captura de pantalla (74)](https://user-images.githubusercontent.com/112580728/225008132-97999503-02fd-4186-a21c-bf2f2d1dc9e0.png)
+![ABYSZLAB](https://user-images.githubusercontent.com/112580728/225008840-da2cbf6a-18ac-471a-9594-3c99b675096c.png)
 
 This is a project under construction. Currently, only a basic use of DFI has been added.
 
