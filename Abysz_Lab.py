@@ -335,7 +335,7 @@ gr.Interface(fn=procesar_imagenes_gradio,
              inputs=inputs+sliders,
              outputs=output_placeholder,
              title="Abysz Lab 0.0.2",
-             description=" Full instructions: https://github.com/AbyszOne/Abysz_lab. Temporal coherence lab, version alpha 0.0.2. Updates incoming: Polar render (Front/back), Lumen deflicker, Mixed deflicker, visual references, and much more.").launch()
+             description=" Full instructions: https://github.com/AbyszOne/Abysz_lab. Temporal coherence lab, version alpha 0.0.2. Updates incoming: Polar render (Front/back), Lumen deflicker, Mixed deflicker, visual references, and much more.").launch(server_port=7884)
 #outputs = [
 #    gr.outputs.Image
 #]
