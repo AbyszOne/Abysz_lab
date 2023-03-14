@@ -6,7 +6,7 @@ This is a project under construction. Currently, only a basic use of DFI has bee
 
 ## DFI video2video processing.
 
-### Basic guide:
+## Basic guide:
 This tool analyzes the stability of the original video, and processes the generated video with that information. Example, if your original background is static, it will force the generated video to respect that. It is an aggressive process, for which we need and will have a lot of control.
 
 Gui version 0.0.2 includes the following parameters.
@@ -26,10 +26,10 @@ Gui version 0.0.2 includes the following parameters.
 ### Basic: 
 The simplest use is to find the balance between deflicking and deghosting. However, this is not efficient.
 
-### Multipass:
+## Multipass:
 The most efficient way to use this tool is to allow a certain amount of corruption and ghosting, in exchange for more stable video. Once we have that base, we must use a second step in Stable Diffusion, at low denoising (1-4). In most cases, this brings back much of the detail, but retains the stability we've gained.
 
-### Multibatch-controlnet: 
+# Multibatch-controlnet: 
 The best, best way to use this tool is to use our "stabilized" video in img2img, and the original video in controlnet HED. Then use a parallel batch to retrieve details. This considerably improves the multipass technique. Unfortunately, that function is not available in the controlnet gui as of this writing.
 
 # TODO
