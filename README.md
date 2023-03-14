@@ -6,7 +6,7 @@ This is a project under construction. Currently, only a basic use of DFI (Differ
 
 ## DFI video2video postprocessing.
 ## Basic guide:
-This tool analyzes the stability of the original video, and processes the generated video with that information. Example, if your original background is static, it will force the generated video to respect that, improving deflicling. It is an aggressive process, for which we need and will have a lot of control.
+This tool analyzes the stability of the original video, and processes the generated video with that information. Example, if your original background is static, it will force the generated video to respect that, acting as a deflicker. It is an aggressive process, for which we need and will have a lot of control.
 
 Gui version 0.0.2 includes the following parameters.
 
