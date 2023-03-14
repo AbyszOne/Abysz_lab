@@ -2,10 +2,9 @@
 
 ![ABYSZLAB](https://user-images.githubusercontent.com/112580728/225008840-da2cbf6a-18ac-471a-9594-3c99b675096c.png)
 
-This is a project under construction. Currently, only a basic use of DFI has been added.
+This is a project under construction. Currently, only a basic use of DFI (Differential Frame Interpolation) has been added.
 
 ## DFI video2video processing.
-
 ## Basic guide:
 This tool analyzes the stability of the original video, and processes the generated video with that information. Example, if your original background is static, it will force the generated video to respect that. It is an aggressive process, for which we need and will have a lot of control.
 
