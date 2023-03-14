@@ -1,4 +1,4 @@
-# Abysz video temporal coherence lab. Gradio GUI.
+# Abysz AI temporal coherence lab. Gradio GUI.
 
 This is a project under construction. Currently, only a basic use of DFI has been added.
 
