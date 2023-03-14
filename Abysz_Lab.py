@@ -9,7 +9,7 @@ import cv2
 import shutil
 import time
 
-def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames_limit, dfi_strength, frame_refresh_frecuency, refresh_strength, smooth, dfi_deghost):
+def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames_limit, dfi_strength, frame_refresh_frequency, refresh_strength, smooth, dfi_deghost):
     # Definir las rutas de las carpetas
         maskD = os.path.basename('MaskD')
         maskS = os.path.basename('MaskS')
@@ -261,7 +261,7 @@ def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames
             os.chdir(original_dir)
             
             # Establecer un valor predeterminado para disolución
-            dissolve = 100 if loop_count % frame_refresh_frecuency != 0 else refresh_strength
+            dissolve = 100 if loop_count % frame_refresh_frequency != 0 else refresh_strength
             #slider2 = gr.inputs.Slider(minimum=0, maximum=100, default=50, step=5, label="FPR Strength")
         
         
@@ -312,16 +312,16 @@ def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames
         #    return gif    
 
 inputs = [
-    gr.inputs.Textbox(label="Base frames folder", default="D:/usuario/Documents/CONTROLNET/DEFLIKER/TESTS/BASE5/FULL"),
-    gr.inputs.Textbox(label="Generated frames folder", default="D:/usuario/Documents/CONTROLNET/DEFLIKER/TESTS/BASE5/WORK/Gen"),
-    gr.inputs.Textbox(label="Output folder", default="D:/usuario/Documents/CONTROLNET/DEFLIKER/Maingradio/EXTOUT"),
-    gr.inputs.Number(label="Frames limit")
+    gr.inputs.Textbox(label="Original frames folder", placeholder="Unless you have used --just resize-- with different aspect ratios, any source will work."),
+    gr.inputs.Textbox(label="Generated frames folder", placeholder="The frames of you generated video"),
+    gr.inputs.Textbox(label="Output folder", placeholder="Remember that each generation overwrites previous frames in the same folder."),
+    gr.inputs.Number(label="Frames to render. 0:ALL")
 ]
 
 sliders = [
     gr.Slider(minimum=1, maximum=10, value=5, step=0.5, label="DFI Strength"),
-    gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame refresh frecuency"),
-    gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Refresh Strength"),
+    gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame Refresh Frequency"),
+    gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Refresh Strength 0=MAX 100=OFF"),
     gr.Slider(minimum=1, maximum=99, value=25, step=2, label="Smooth"),
     gr.Slider(minimum=0, maximum=10, value=4, step=1, label="DFI Deghost")
 ]
@@ -331,7 +331,11 @@ output_placeholder = gr.outputs.Textbox(label="Status")
 # Agregando el componente gr.outputs.Image a la lista de salidas
 #outputs = [output_placeholder, gr.outputs.Image(label="GIF")]
 
-gr.Interface(fn=procesar_imagenes_gradio, inputs=inputs+sliders, outputs=output_placeholder, interpretation="Ejecutar").launch()
+gr.Interface(fn=procesar_imagenes_gradio,
+             inputs=inputs+sliders,
+             outputs=output_placeholder,
+             title="Abysz Lab 0.0.2",
+             description=" Full instructions: https://github.com/AbyszOne/Abysz_lab. Temporal coherence lab, version alpha 0.0.2. Updates incoming: Polar render (Front/back), Lumen deflicker, Mixed deflicker, visual references, and much more.").launch()
 #outputs = [
 #    gr.outputs.Image
 #]
