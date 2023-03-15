@@ -2,6 +2,7 @@
 
 ![ABYSZLAB](https://user-images.githubusercontent.com/112580728/225008840-da2cbf6a-18ac-471a-9594-3c99b675096c.png)
 
+Until I figure out how to port it to a tab inside Automatic1111, you can open both at the same time with no problem.
 This is a project under construction. Currently, only a basic use of DFI (Differential Frame Interpolation) has been added.
 
 ## DFI video2video postprocessing.
