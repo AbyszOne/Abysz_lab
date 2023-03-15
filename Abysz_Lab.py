@@ -35,7 +35,8 @@ def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames
             for file in os.listdir(ruta_entrada_1):
                 if file.endswith(".jpg") or file.endswith(".jpeg") or file.endswith(".png"):
                     img = Image.open(os.path.join(ruta_entrada_1, file))
-                    img.save(os.path.join("Source", file), "jpeg", quality=100)
+                    rgb_img = img.convert('RGB')
+                    rgb_img.save(os.path.join("Source", file), "jpeg", quality=100)
                     count += 1
                     if frames_limit > 0 and count >= frames_limit:
                         break
@@ -322,7 +323,7 @@ sliders = [
     gr.Slider(minimum=1, maximum=10, value=5, step=0.5, label="DFI Strength (Basically, the size of the interpolated areas. You probably don't want too much or too little)"),
     gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame Refresh Frequency (Reduce interpolation every X cycles. Means, allowing flick too)"),
     gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Frame Refresh Control (How much % of interpolation allows. 0 means, full frame refresh)"),
-    gr.Slider(minimum=1, maximum=99, value=10, step=2, label="Smooth (Smooths edges, but 5-25 is recommended for now, until algorithm improves)"),
+    gr.Slider(minimum=1, maximum=99, value=11, step=2, label="Smooth (Smooths edges, but 5-25 is recommended for now, until algorithm improves)"),
     gr.Slider(minimum=0, maximum=10, value=3, step=1, label="DFI Deghost (Artificially fattens the edges of the areas to be interpolated. Experimental. 0=Off)")
 ]
 
