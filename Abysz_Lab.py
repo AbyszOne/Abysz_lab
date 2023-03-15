@@ -13,14 +13,14 @@ def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames
     # Definir las rutas de las carpetas
         maskD = os.path.basename('MaskD')
         maskS = os.path.basename('MaskS')
-        output = os.path.basename(ruta_salida)
+        #output = os.path.basename(ruta_salida)
         source = os.path.basename('Source')
         #gen = os.path.basename(ruta_entrada_2)
 
         
         os.makedirs(source, exist_ok=True)
         os.makedirs(maskS, exist_ok=True)
-        os.makedirs(output, exist_ok=True)
+        os.makedirs(ruta_salida, exist_ok=True)
         os.makedirs(maskD, exist_ok=True)
         #os.makedirs(gen, exist_ok=True)
         
@@ -286,7 +286,7 @@ def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames
                 ext = ''
                                   
             # Componer la imagen de MaskS y Gen con disolución (si está definido) y guardarla en la carpeta de salida
-            os.system(f"magick composite {'-dissolve ' + str(dissolve) + '%' if dissolve is not None else ''} {maskS}/{filename}.png {ruta_entrada_2}/{filename}{ext} {output}/{filename}{ext}")
+            os.system(f"magick composite {'-dissolve ' + str(dissolve) + '%' if dissolve is not None else ''} {maskS}/{filename}.png {ruta_entrada_2}/{filename}{ext} {ruta_salida}/{filename}{ext}")
             
             # Obtener el nombre del archivo más bajo en la carpeta MaskD
             maskd_files = [f for f in os.listdir(maskD) if os.path.isfile(os.path.join(maskD, f)) and f.startswith('')]
@@ -319,11 +319,11 @@ inputs = [
 ]
 
 sliders = [
-    gr.Slider(minimum=1, maximum=10, value=5, step=0.5, label="DFI Strength"),
-    gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame Refresh Frequency"),
-    gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Refresh Strength 0=MAX 100=OFF"),
-    gr.Slider(minimum=1, maximum=99, value=25, step=2, label="Smooth"),
-    gr.Slider(minimum=0, maximum=10, value=4, step=1, label="DFI Deghost")
+    gr.Slider(minimum=1, maximum=10, value=5, step=0.5, label="DFI Strength (4-6 recommended)"),
+    gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame Refresh Frequency (Allow flicking every X frames, to keep balance. 3-7 recommended)"),
+    gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Refresh Strength (0=MAX 100=OFF)"),
+    gr.Slider(minimum=1, maximum=99, value=25, step=2, label="Smooth (10-50 recommended)"),
+    gr.Slider(minimum=0, maximum=10, value=4, step=1, label="DFI Deghost (0=OFF, 0-4 recommended) ")
 ]
 
 output_placeholder = gr.outputs.Textbox(label="Status")
