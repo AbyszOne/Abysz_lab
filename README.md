@@ -34,7 +34,7 @@ The best, best way to use this tool is to use our "stabilized" video in img2img,
 
 # TODO
 Automatic1111 extension. Given my limited knowledge of programming, I had trouble getting my script to interact within A1111. I hope soon to solve details to integrate this tool.
-Also, there are many important utilities that are in development, waiting to be added soon, such as polar rendering (like "front/back", but more complex), luminosity deficker, blend deflicker, gif viewer, source analysis, preprocessing, etc.
+Also, there are many important utilities that are in development, waiting to be added soon, such as polar rendering (like "front/back", but more complex), luminosity deflicker, blend deflicker, gif viewer, source analysis, preprocessing, etc.
 
 # Requirements
 
