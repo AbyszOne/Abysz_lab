@@ -30,7 +30,7 @@ The simplest use is to find the balance between deflicking and deghosting. Howev
 The most efficient way to use this tool is to allow a certain amount of corruption and ghosting, in exchange for more stable video. Once we have that base, we must use a second step in Stable Diffusion, at low denoising (1-4). In most cases, this brings back much of the detail, but retains the stability we've gained.
 
 # Multibatch-controlnet: 
-The best, best way to use this tool is to use our "stabilized" video in img2img, and the original video in controlnet HED. Then use a parallel batch to retrieve details. This considerably improves the multipass technique. Unfortunately, that function is not available in the controlnet gui as of this writing.
+The best, best way to use this tool is to use our "stabilized" video in img2img, and the original (REAL) video in controlnet HED. Then use a parallel batch to retrieve details. This considerably improves the multipass technique. Unfortunately, that function is not available in the controlnet gui as of this writing.
 
 # TODO
 Automatic1111 extension. Given my limited knowledge of programming, I had trouble getting my script to interact within A1111. I hope soon to solve details to integrate this tool.
