@@ -313,17 +313,17 @@ def procesar_imagenes_gradio(ruta_entrada_1, ruta_entrada_2, ruta_salida, frames
 
 inputs = [
     gr.inputs.Textbox(label="Original frames folder", placeholder="Unless you have used --just resize-- with different aspect ratios, any source will work."),
-    gr.inputs.Textbox(label="Generated frames folder", placeholder="The frames of you generated video"),
+    gr.inputs.Textbox(label="Generated frames folder", placeholder="The frames of AI generated video"),
     gr.inputs.Textbox(label="Output folder", placeholder="Remember that each generation overwrites previous frames in the same folder."),
     gr.inputs.Number(label="Frames to render. 0:ALL")
 ]
 
 sliders = [
-    gr.Slider(minimum=1, maximum=10, value=5, step=0.5, label="DFI Strength (4-6 recommended)"),
-    gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame Refresh Frequency (Allow flicking every X frames, to keep balance. 3-7 recommended)"),
-    gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Refresh Strength (0=MAX 100=OFF)"),
-    gr.Slider(minimum=1, maximum=99, value=25, step=2, label="Smooth (10-50 recommended)"),
-    gr.Slider(minimum=0, maximum=10, value=4, step=1, label="DFI Deghost (0=OFF, 0-4 recommended) ")
+    gr.Slider(minimum=1, maximum=10, value=5, step=0.5, label="DFI Strength (Basically, the size of the interpolated areas. You probably don't want too much or too little)"),
+    gr.Slider(minimum=1, maximum=30, value=5, step=1, label="Frame Refresh Frequency (Reduce interpolation every X cycles. Means, allowing flick too)"),
+    gr.Slider(minimum=0, maximum=100, value=50, step=5, label="Frame Refresh Control (How much % of interpolation allows. 0 means, full frame refresh)"),
+    gr.Slider(minimum=1, maximum=99, value=10, step=2, label="Smooth (Smooths edges, but 5-25 is recommended for now, until algorithm improves)"),
+    gr.Slider(minimum=0, maximum=10, value=3, step=1, label="DFI Deghost (Artificially fattens the edges of the areas to be interpolated. Experimental. 0=Off)")
 ]
 
 output_placeholder = gr.outputs.Textbox(label="Status")
@@ -335,7 +335,7 @@ gr.Interface(fn=procesar_imagenes_gradio,
              inputs=inputs+sliders,
              outputs=output_placeholder,
              title="Abysz Lab 0.0.2",
-             description=" Full instructions: https://github.com/AbyszOne/Abysz_lab. Temporal coherence lab, version alpha 0.0.2. Updates incoming: Polar render (Front/back), Lumen deflicker, Mixed deflicker, visual references, and much more.").launch(server_port=7884)
+             description=" INSTRUCTIONS: https://github.com/AbyszOne/Abysz_lab. Temporal coherence lab, alpha 0.0.2. Updates incoming: Polar render (Front/back), Lumen deflicker, Blend deflicker, Visor, tests lab, preprocessing, and much more.").launch(server_port=7884)
 #outputs = [
 #    gr.outputs.Image
 #]
