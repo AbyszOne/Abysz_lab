@@ -38,6 +38,8 @@ Also, there are many important utilities that are in development, waiting to be 
 
 # Requirements
 
-OpenCV: pip install opencv-python
+Gradio: ```pip install gradio```
+
+OpenCV: ```pip install opencv-python```
 
 Imagemagick library: https://imagemagick.org/script/download.php
