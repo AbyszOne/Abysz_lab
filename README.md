@@ -3,13 +3,12 @@
 ![LABGUI05](https://user-images.githubusercontent.com/112580728/225713237-7126e22c-d3f6-4706-9fd4-ce51e22b73ab.png)
 
 Until I figure out how to port it to a tab inside Automatic1111, you can open both at the same time with no problem.
-This is a project under construction. Currently, only a basic use of DFI (Differential Frame Interpolation) has been added.
 
 ## DFI video2video postprocessing.
 ## Basic guide:
-This tool analyzes the stability of the original video, and processes the generated video with that information. Example, if your original background is static, it will force the generated video to respect that, acting as a complex deflicker. It is an aggressive process, for which we need and will have a lot of control.
+Differential frame interpolation analyzes the stability of the original video, and processes the generated video with that information. Example, if your original background is static, it will force the generated video to respect that, acting as a complex deflicker. It is an aggressive process, for which we need and will have a lot of control.
 
-Gui version 0.0.2 includes the following parameters.
+Gui version 0.0.5 includes the following parameters.
 
 **Frame refresh frequency:** Every how many frames the interpolation is reduced. It allows to keep more information of the generated video, and avoid major ghosting.
 
@@ -20,6 +19,8 @@ Gui version 0.0.2 includes the following parameters.
 **DFI Deghost:** A variable that generally reduces the areas affected by DFI. This can reduce ghosting without changing DFI strength.
 
 **Smooth:** Smoothes the interpolation. High values reduce the effectiveness of the process.
+
+**Source denoise:** Improves scanning in noisy sources.
 
 # USE STRATEGIES:
 
