@@ -22,6 +22,8 @@ Gui version 0.0.5 includes the following parameters.
 
 **Source denoise:** Improves scanning in noisy sources.
 
+(BLEND DEFLICKER ADDED)
+
 # USE STRATEGIES:
 
 ### Basic: 
