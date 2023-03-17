@@ -1,5 +1,5 @@
 # Abysz AI temporal coherence lab. 
-## Gradio GUI Alpha 0.0.5
+## Gradio GUI Alpha 0.0.5. Check Automatic1111 extension: https://github.com/AbyszOne/Abysz-LAB-Ext
 
 ![LABGUI05](https://user-images.githubusercontent.com/112580728/225713237-7126e22c-d3f6-4706-9fd4-ce51e22b73ab.png)
 
